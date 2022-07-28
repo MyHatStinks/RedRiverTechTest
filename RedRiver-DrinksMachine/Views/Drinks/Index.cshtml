@@ -1,3 +1,25 @@
 ﻿@{
     ViewBag.Title = "Drinks Machine";
 }
+
+<div class="jumbotron">
+    <h1>Red River Drinks Machine</h1>
+    <p class="lead">Select which drink you would like to make.</p>
+
+    @using (Ajax.BeginForm("BrewDrink", new { drink = "lemonTea" }, new AjaxOptions() { InsertionMode = InsertionMode.Replace, UpdateTargetId = "results" }, new { style = "display: inline" }))
+    {
+        <button type="submit" class="btn btn-primary btn-lg">Lemon Tea</button>
+    }
+    @using (Ajax.BeginForm("BrewDrink", new { drink = "coffee" }, new AjaxOptions() { InsertionMode = InsertionMode.Replace, UpdateTargetId = "results" }, new { style = "display: inline" }))
+    {
+        <button type="submit" class="btn btn-primary btn-lg">Coffee</button>
+    }
+    @using (Ajax.BeginForm("BrewDrink", new { drink = "chocolate" }, new AjaxOptions() { InsertionMode = InsertionMode.Replace, UpdateTargetId = "results" }, new { style = "display: inline" }))
+    {
+        <button type="submit" class="btn btn-primary btn-lg">Chocolate</button>
+    }
+</div>
+
+<div id="results">
+</div>
+
