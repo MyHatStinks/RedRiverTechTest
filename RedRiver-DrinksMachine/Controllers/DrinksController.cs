@@ -29,10 +29,10 @@ namespace RedRiver_DrinksMachine.Controllers
                     recipe = new LemonTea();
                     break;
                 case "coffee":
-                    recipe = new LemonTea();
+                    recipe = new Coffee();
                     break;
                 case "chocolate":
-                    recipe = new LemonTea();
+                    recipe = new Chocolate();
                     break;
                 default:
                     throw new ArgumentException("Invalid drink specified.", nameof(drink));
